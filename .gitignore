@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Apify local state & storage
+storage/
+.actor/storage/
+apify_storage/
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo

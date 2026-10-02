@@ -1,0 +1,62 @@
+{
+  "title": "App Reviews Scraper Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "googlePlayAppIds": {
+      "title": "Google Play package names or URLs",
+      "type": "array",
+      "description": "Android package IDs or full URLs, e.g. com.whatsapp, com.spotify.music, or https://play.google.com/store/apps/details?id=com.whatsapp",
+      "editor": "stringList",
+      "default": []
+    },
+    "appleAppIds": {
+      "title": "Apple App Store app IDs or URLs",
+      "type": "array",
+      "description": "Numeric Apple app IDs or full apps.apple.com URLs, e.g. 310633997 or https://apps.apple.com/us/app/whatsapp-messenger/id310633997",
+      "editor": "stringList",
+      "default": []
+    },
+    "country": {
+      "title": "Country / storefront",
+      "type": "string",
+      "description": "Two-letter country code used for both stores (e.g. us, gb, in, de, ca).",
+      "editor": "textfield",
+      "default": "us"
+    },
+    "language": {
+      "title": "Language (Google Play only)",
+      "type": "string",
+      "description": "Two-letter language code for Google Play reviews (e.g. en, es, fr, de, hi).",
+      "editor": "textfield",
+      "default": "en"
+    },
+    "maxReviewsPerApp": {
+      "title": "Max reviews per app",
+      "type": "integer",
+      "description": "Maximum number of reviews to scrape per app. Google Play supports thousands; Apple public feed serves the newest reviews per country.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 5000
+    },
+    "sortGooglePlay": {
+      "title": "Google Play sort order",
+      "type": "string",
+      "description": "Sort order for Google Play reviews: Newest or Most relevant.",
+      "editor": "select",
+      "enum": ["NEWEST", "MOST_RELEVANT"],
+      "enumTitles": ["Newest", "Most relevant"],
+      "default": "NEWEST"
+    },
+    "sortAppStore": {
+      "title": "App Store sort order",
+      "type": "string",
+      "description": "Sort order for Apple App Store reviews: Most recent or Most helpful.",
+      "editor": "select",
+      "enum": ["mostrecent", "mosthelpful"],
+      "enumTitles": ["Most recent", "Most helpful"],
+      "default": "mostrecent"
+    }
+  },
+  "required": []
+}
