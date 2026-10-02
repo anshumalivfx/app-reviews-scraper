@@ -1,0 +1,12 @@
+{
+  "actorKeyValueStoreSchemaVersion": 1,
+  "title": "Key-value store schema",
+  "description": "Key-value store schema for App Reviews Scraper",
+  "collections": {
+    "inputs": {
+      "title": "Inputs",
+      "description": "Actor input configuration and parameters",
+      "keyPrefix": "INPUT"
+    }
+  }
+}

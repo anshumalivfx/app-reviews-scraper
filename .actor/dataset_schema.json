@@ -1,0 +1,116 @@
+{
+  "actorSpecification": 1,
+  "fields": {
+    "type": "object",
+    "properties": {
+      "platform": {
+        "type": "string",
+        "description": "Store platform ('google_play' or 'app_store')"
+      },
+      "appId": {
+        "type": "string",
+        "description": "Unique app identifier (Google Play package name or Apple app ID)"
+      },
+      "appName": {
+        "type": ["string", "null"],
+        "description": "Official application title"
+      },
+      "rating": {
+        "type": "integer",
+        "description": "Customer star rating (1 to 5)"
+      },
+      "title": {
+        "type": ["string", "null"],
+        "description": "Review headline or title"
+      },
+      "text": {
+        "type": ["string", "null"],
+        "description": "Content of the review"
+      },
+      "author": {
+        "type": ["string", "null"],
+        "description": "Author display name"
+      },
+      "version": {
+        "type": ["string", "null"],
+        "description": "App version at time of review"
+      },
+      "date": {
+        "type": ["string", "null"],
+        "description": "Timestamp when the review was posted"
+      },
+      "helpfulCount": {
+        "type": "integer",
+        "description": "Count of users who found this review helpful"
+      },
+      "country": {
+        "type": "string",
+        "description": "Country storefront code"
+      },
+      "reviewUrl": {
+        "type": ["string", "null"],
+        "description": "Direct link to the review if available"
+      },
+      "scrapedAt": {
+        "type": "string",
+        "description": "Timestamp when the review was collected"
+      }
+    },
+    "required": [
+      "platform",
+      "appId",
+      "rating"
+    ]
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "description": "Clean summary view of customer reviews",
+      "transformation": {
+        "fields": [
+          "platform",
+          "appName",
+          "rating",
+          "title",
+          "text",
+          "author",
+          "date",
+          "helpfulCount",
+          "country"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "platform": {
+            "label": "Store"
+          },
+          "appName": {
+            "label": "App"
+          },
+          "rating": {
+            "label": "Rating"
+          },
+          "title": {
+            "label": "Title"
+          },
+          "text": {
+            "label": "Review"
+          },
+          "author": {
+            "label": "Author"
+          },
+          "date": {
+            "label": "Date"
+          },
+          "helpfulCount": {
+            "label": "Helpful"
+          },
+          "country": {
+            "label": "Country"
+          }
+        }
+      }
+    }
+  }
+}

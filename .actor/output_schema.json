@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "App Reviews Scraper Output",
+  "description": "Standardized customer reviews dataset from Google Play and Apple App Store",
+  "properties": {
+    "reviews": {
+      "type": "string",
+      "title": "Customer Reviews Dataset",
+      "description": "Clean, standardized reviews dataset with ratings, review text, author, version, dates, and helpful counts",
+      "template": "{{storages.datasets.default.apiUrl}}/items"
+    }
+  }
+}

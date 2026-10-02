@@ -8,6 +8,11 @@
     "templateId": "python-start"
   },
   "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./key_value_store_schema.json"
+  },
   "dockerfile": "../Dockerfile",
   "readme": "../README.md"
 }
